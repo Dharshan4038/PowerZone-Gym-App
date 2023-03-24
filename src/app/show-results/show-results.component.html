@@ -1,0 +1,36 @@
+<section>
+  <div class="container-fluid flu">
+    <div class="header">
+      <h1 class="head">Showing Results</h1>
+    </div>
+
+    <div class="row">
+      <ng-container *ngFor="let i of allExercise | paginate: {itemsPerPage: 6,currentPage: p}" >
+          <div class="card">
+            <img class="card-img-top"  src = "{{i.gifUrl}}" alt="Card image cap">
+            <div class="card-body">
+              <div class="row">
+                <a href="#" class="btn btns" style="background-color: crimson;" >{{i.bodyPart}}</a>
+                <a href="#" class="btn btns" style="background-color: green;">{{i.target}}</a>
+              </div>
+              <h3 class="card-title">{{i.name}}</h3>
+            </div>
+          </div>
+      </ng-container>
+    </div>
+    <div class="pagination" >
+      <pagination-controls (pageChange)="p=$event" class="center"></pagination-controls>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <footer id="footer" class="bg-dark">
+    <i class="logo fa-brands fa-twitter"></i>
+    <i class="logo fa-brands fa-facebook"></i>
+    <i class="logo fa-brands fa-instagram"></i>
+    <i class="logo fa-solid fa-envelope"></i>
+    <p>© Copyright 2023 Power Zone</p>
+  </footer>
+</section>

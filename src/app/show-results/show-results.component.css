@@ -1,0 +1,76 @@
+.flu {
+  padding: 0% 10% 0%;
+  height: fit-content;
+  background-color: rgb(255, 250, 244);
+}
+
+.head {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.card {
+  max-width: 350px;
+  margin-top: 5%;
+  margin-left: 50px;
+  padding: 1.5em 0.5em 0.5em;
+  box-shadow: 0 5px 10px rgba(0, 0, 0,0.2);
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+.card-title {
+  text-transform: capitalize;
+}
+
+.card-img-top {
+  margin: 0 auto;
+}
+
+.btns {
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  border-radius: 50px;
+  color: white;
+  font-size: 1rem;
+  height: 40px;
+  font-size: 18px;
+  width: fit-content;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+
+#footer {
+  padding: 7% 15%;
+  text-align: center;
+  color: white;
+}
+
+.logo {
+  margin: 15px;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1028px) {
+  .flu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .card {
+    margin: 20px auto;
+    cursor: pointer;
+  }
+
+}

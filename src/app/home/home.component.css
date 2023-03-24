@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Neonderthaw&family=Poppins:ital,wght@0,400;0,500;0,700;1,600&family=Roboto:ital@1&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+.ht {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 13px 0px 0 20px;
+}
+
+.head {
+  font-family: 'Montserrat',sans-serif;
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+.pwt {
+  margin-top: 15%;
+  color: crimson;
+  font-weight: 600;
+}
+
+.flu {
+  padding: 0% 10% 0%;
+  height: 100vh;
+}
+
+
+/* Navigation Bar  */
+
+.navbar {
+  width: 50%;
+  padding: 0 0 4.5rem;
+}
+
+.navbar-nav {
+  margin-top: 13px;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.3rem;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 500;
+  color: crimson;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: green;
+}
+
+/* Download Buttons  */
+
+.e-btn {
+  margin: 5% 3% 5% 0;
+  background-color: crimson;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.e-btn:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.05);
+  background-color: white;
+  color: red;
+  border: red solid 1px;
+}
+
+/*  Image */
+
+.image {
+  height: 100vh;
+  top: -35%;
+  right: -10%;
+  position: absolute;
+}
+
+
+
+/* Section-2 */
+
+.sec-2 {
+  background-color: rgb(255, 250, 244);
+}
+
+.header {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.search-div {
+  text-align: center;
+  margin: 5% auto 5% auto ;
+}
+
+.inp {
+  width: 60%;
+  height: 40px;
+  padding: 8px;
+  outline: none;
+}
+
+.butn {
+  height: 40px;
+  border: none;
+  background-color: crimson;
+  color: white;
+  width: 15%;
+  border-radius: 5px;
+
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  cursor: pointer;
+}
+
+.butn:hover{
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+
+.menu {
+  padding: 20px 0;
+  margin-top: 13%;
+}
+
+.card img {
+  width: 150px;
+  padding-top: 10px;
+}
+
+.imgs {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin-right: 20px;
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+.card:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.05);
+}
+
+@media (max-width: 1028px) {
+  .image {
+      display: none;
+  }
+}

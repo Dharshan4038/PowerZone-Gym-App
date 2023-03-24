@@ -1,0 +1,136 @@
+<section class="home">
+  <div class="container-fluid flu">
+      <nav class="navbar navbar-expand-lg">
+        <img src="../../assets/images/Logo.png" alt="logo">
+        <a class="navbar-brand ht">Power<span style="color:red"> Zone</span></a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="" >Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="" >Exercises</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="pwt" >Power Fitness</h3>
+          <h1 class="head">Love Yourself Enough To Work Harder</h1>
+          <p style="font-size: 1.1rem;" ><strong>Check out the most effective exercises personalized to you</strong></p>
+          <button type="button" class="btn btn-lg e-btn">Explore Exercises</button>
+        </div>
+
+        <div class="col-lg-6">
+          <img src="../../assets/images/banner.png" class="image" alt="banner">
+        </div>
+
+      </div>
+
+  </div>
+</section>
+
+<section class="sec-2">
+  <div class="container-fluid flu">
+    <div class="header">
+      <h1 class="head">Awesome Workouts You </h1>
+      <h1 class="head">Should Know</h1>
+    </div>
+
+    <div class="search-div">
+      <input type="text" placeholder="Search Exercises" class="inp">
+      <button type="button" class="butn">Search</button>
+    </div>
+
+    <div class="menu">
+        <owl-carousel-o [options]="customOptions">
+          <ng-template carouselSlide>
+            <div class="card" (click)="sendMsg('')" >
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center">All</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card" (click)="sendMsg('back')" >
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center">Back</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card" (click)="sendMsg('cardio')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center">Cardio</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card" (click)="sendMsg('chest')" >
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center">Chest</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card" (click)="sendMsg('lower%20arms')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center" >Lower Arms</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card" (click)="sendMsg('lower%20legs')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center" >Lower Legs</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card" (click)="sendMsg('neck')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center" >Neck</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card" (click)="sendMsg('shoulders')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center" >Shoulders</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card" (click)="sendMsg('upper%20arms')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center" >Upper Arms</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card" (click)="sendMsg('upper%20legs')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center" >Upper Legs</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card" (click)="sendMsg('waist')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center" >Waist</h4>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+    </div>
+  </div>
+</section>
+<app-show-results></app-show-results>
