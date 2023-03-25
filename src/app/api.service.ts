@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { AdItem } from './show-results/ad-items';
 import { AllComponent } from './show-results/all/all.component';
 import { ExerciseResultComponent } from './show-results/exercise-result/exercise-result.component';
+import { SearchComponent } from './show-results/search/search.component';
 
 
 
@@ -33,18 +34,21 @@ export class ApiService {
     return this.http.get<any>(url,{headers});
   }
 
-  // To transfer data between sibling components
-  part:string="";
-  setPart(data:string){
-    this.part = data;
+  listbyTargetMuscel(val:string): Observable<any>{
+    let headers = new HttpHeaders().set('x-rapidapi-key',this.apiKey)
+    .set('x-rapidapi-host',this.apiHost);
+    let url = "https://exercisedb.p.rapidapi.com/exercises/target/"+val;
+    return this.http.get<any>(url,{headers});
   }
-  getPart() {
-    return this.part;
+
+  listbyName(val:string): Observable<any>{
+      let headers = new HttpHeaders().set('x-rapidapi-key',this.apiKey)
+      .set('x-rapidapi-host',this.apiHost);
+      let url = "https://exercisedb.p.rapidapi.com/exercises/name/"+val;
+      return this.http.get<any>(url,{headers});
   }
 
   getAds() {
-    let allExercise = [];
-    allExercise = [{bodyPart:"chest",gifUrl:"adsf",target:"lbs"}];
     return [
       new AdItem(
         AllComponent,
@@ -61,7 +65,47 @@ export class ApiService {
       new AdItem(
         ExerciseResultComponent,
         {bodyPart: "chest"}
+      ),
+      new AdItem(
+        ExerciseResultComponent,
+        {bodyPart: "lower%20arms"}
+      ),
+      new AdItem(
+        ExerciseResultComponent,
+        {bodyPart: "lower%20legs"}
+      ),
+      new AdItem(
+        ExerciseResultComponent,
+        {bodyPart: "neck"}
+      ),
+      new AdItem(
+        ExerciseResultComponent,
+        {bodyPart: "shoulders"}
+      ),
+      new AdItem(
+        ExerciseResultComponent,
+        {bodyPart: "upper%20arms"}
+      ),
+      new AdItem(
+        ExerciseResultComponent,
+        {bodyPart: "upper%20legs"}
+      ),
+      new AdItem(
+        ExerciseResultComponent,
+        {bodyPart: "waist"}
       )
     ]
   }
+
+  searchAds(val:string) {
+    return [
+      new AdItem(
+        SearchComponent,
+        {bodyPart: val}
+      )
+    ]
+  }
+
+
+
 }

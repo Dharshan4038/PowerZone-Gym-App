@@ -21,10 +21,9 @@ export class AllComponent implements AdComponent,OnInit {
 
   getMyExercise() {
     this.allExercise.splice(0);
-    // this.api.listOfAllExercises().subscribe(res => {
-    //     this.allExercise = res;
-    //     console.log(this.allExercise);
-    // })
+    this.api.listOfAllExercises().subscribe(res => {
+        this.allExercise = res;
+    })
   }
 
 

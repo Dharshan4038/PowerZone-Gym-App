@@ -20,11 +20,10 @@ export class ExerciseResultComponent implements AdComponent,OnInit {
   }
 
   getMyExercise() {
-    // this.allExercise.splice(0);
-    // this.api.listbyBodyPart(this.data.bodyPart).subscribe(res => {
-    //     this.allExercise = res;
-    //     console.log(this.allExercise);
-    // })
+    this.allExercise.splice(0);
+    this.api.listbyBodyPart(this.data.bodyPart).subscribe(res => {
+        this.allExercise = res;
+    })
   }
 
 }

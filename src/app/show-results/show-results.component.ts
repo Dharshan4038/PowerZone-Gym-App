@@ -23,8 +23,6 @@ export class ShowResultsComponent implements OnInit {
         this.sendMsg(0,"");
     }
 
-
-
     // Dynamic Component Selection Fuction
     sendMsg(val:number,str:string){
       this.index = val;
@@ -37,6 +35,19 @@ export class ShowResultsComponent implements OnInit {
       componentRef.instance.data = adItem.data;
 
     }
+
+    searchRes(val:string) {
+      let exe: AdItem[] = [];
+      exe = this.api.searchAds(val);
+
+      const adItem = exe[0];
+      const viewContainerRef = this.adHost.viewContainerRef;
+      viewContainerRef.clear();
+
+      const componentRef = viewContainerRef.createComponent<AdComponent>(adItem.component);
+      componentRef.instance.data = adItem.data;
+    }
+
 
     // Owl Carosuel Features
     customOptions: OwlOptions = {

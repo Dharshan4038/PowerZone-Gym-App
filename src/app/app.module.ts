@@ -16,6 +16,7 @@ import { ExerciseResultComponent } from './show-results/exercise-result/exercise
 import { AllComponent } from './show-results/all/all.component';
 import { AdDirective } from './show-results/ad.directive';
 import { ExerciseComponent } from './show-results/exercise/exercise.component';
+import { SearchComponent } from './show-results/search/search.component';
 
 
 
@@ -27,7 +28,8 @@ import { ExerciseComponent } from './show-results/exercise/exercise.component';
     ExerciseResultComponent,
     AllComponent,
     AdDirective,
-    ExerciseComponent
+    ExerciseComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

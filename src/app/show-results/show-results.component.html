@@ -7,8 +7,8 @@
     </div>
 
     <div class="search-div">
-      <input type="text" placeholder="Search Exercises" class="inp" />
-      <button type="button" class="butn">Search</button>
+      <input type="text" id="s-inp" placeholder="Search Exercises" #Box class="inp" />
+      <button type="button" class="butn" (click)="searchRes(Box.value)" >Search</button>
     </div>
 
     <div class="menu">

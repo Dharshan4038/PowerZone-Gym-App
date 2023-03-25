@@ -15,26 +15,8 @@ export class ExerciseComponent implements AdComponent,OnInit {
     constructor(private api:ApiService){}
 
     ngOnInit():void {
-      this.getMyExercise("all");
-    }
 
-    getMyExercise(val:string) {
-      if(val == "all") {
-        this.allExercise.splice(0);
-        // this.api.listOfAllExercises().subscribe(res => {
-        //   this.allExercise = res;
-        //   console.log(this.allExercise);
-        // })
-      }
-      else {
-        // this.api.listbyBodyPart(val).subscribe(res => {
-        //   this.allExercise.splice(0);
-        //   this.allExercise = res;
-        //   console.log(this.allExercise);
-        // })
-      }
     }
-
 
 
 }
