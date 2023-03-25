@@ -1,26 +1,118 @@
-<section>
-  <div class="container-fluid flu">
+
+<section class="sec-2">
+  <div class="container-fluid flu1">
     <div class="header">
-      <h1 class="head">Showing Results</h1>
+      <h1 class="head">Awesome Workouts You </h1>
+      <h1 class="head">Should Know</h1>
     </div>
 
-    <div class="row">
-      <ng-container *ngFor="let i of allExercise | paginate: {itemsPerPage: 6,currentPage: p}" >
-          <div class="card">
-            <img class="card-img-top"  src = "{{i.gifUrl}}" alt="Card image cap">
-            <div class="card-body">
-              <div class="row">
-                <a href="#" class="btn btns" style="background-color: crimson;" >{{i.bodyPart}}</a>
-                <a href="#" class="btn btns" style="background-color: green;">{{i.target}}</a>
+    <div class="search-div">
+      <input type="text" placeholder="Search Exercises" class="inp" />
+      <button type="button" class="butn">Search</button>
+    </div>
+
+    <div class="menu">
+        <owl-carousel-o [options]="customOptions">
+          <ng-template carouselSlide>
+            <div class="card c2" (click)="sendMsg(0,'')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
               </div>
-              <h3 class="card-title">{{i.name}}</h3>
+              <h4 class="text-center">All</h4>
             </div>
-          </div>
-      </ng-container>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card c2" (click)="sendMsg(1,'back')" >
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center">Back</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card c2" (click)="sendMsg(2,'cardio')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center">Cardio</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card c2" (click)="sendMsg(3,'chest')" >
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center">Chest</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card c2" (click)="sendMsg(4,'lower%20arms')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center" >Lower Arms</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card c2" (click)="sendMsg(5,'lower%20legs')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center" >Lower Legs</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card c2" (click)="sendMsg(6,'neck')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center" >Neck</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card c2" (click)="sendMsg(7,'shoulders')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center" >Shoulders</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card c2" (click)="sendMsg(8,'upper%20arms')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center" >Upper Arms</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card c2" (click)="sendMsg(9,'upper%20legs')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center" >Upper Legs</h4>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="card c2" (click)="sendMsg(10,'waist')">
+              <div class="imgs">
+                <img src="../../assets/icons/gym.png" alt="">
+              </div>
+              <h4 class="text-center" >Waist</h4>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
     </div>
-    <div class="pagination" >
-      <pagination-controls (pageChange)="p=$event" class="center"></pagination-controls>
+  </div>
+</section>
+
+
+<section>
+  <div class="container-fluid flu">
+    <div class="header1">
+      <h1 class="hd1">Showing Results</h1>
     </div>
+    <ng-template adHost></ng-template>
   </div>
 </section>
 

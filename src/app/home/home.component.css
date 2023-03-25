@@ -26,6 +26,7 @@
 }
 
 
+
 /* Navigation Bar  */
 
 .navbar {
@@ -80,76 +81,6 @@
 }
 
 
-
-/* Section-2 */
-
-.sec-2 {
-  background-color: rgb(255, 250, 244);
-}
-
-.header {
-  margin-top: 10%;
-  text-align: center;
-}
-
-.search-div {
-  text-align: center;
-  margin: 5% auto 5% auto ;
-}
-
-.inp {
-  width: 60%;
-  height: 40px;
-  padding: 8px;
-  outline: none;
-}
-
-.butn {
-  height: 40px;
-  border: none;
-  background-color: crimson;
-  color: white;
-  width: 15%;
-  border-radius: 5px;
-
-  font-size: 1.3rem;
-  font-family: sans-serif;
-  border-bottom-left-radius: 0px;
-  border-top-left-radius: 0px;
-  cursor: pointer;
-}
-
-.butn:hover{
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  transform: scale(1.05);
-}
-
-.menu {
-  padding: 20px 0;
-  margin-top: 13%;
-}
-
-.card img {
-  width: 150px;
-  padding-top: 10px;
-}
-
-.imgs {
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  margin-right: 20px;
-  cursor: pointer;
-  background-color: whitesmoke;
-}
-
-.card:hover {
-  transition: 0.3s ease-in-out;
-  transform: scale(1.05);
-}
 
 @media (max-width: 1028px) {
   .image {

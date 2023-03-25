@@ -1,0 +1,18 @@
+<div class="row">
+  <ng-container *ngFor="let i of allExercise | paginate: {itemsPerPage: 6,currentPage: p}" >
+      <div class="card c1">
+        <img class="card-img-top"  src = "{{i.gifUrl}}" alt="Card image cap">
+        <div class="card-body">
+          <div class="row">
+            <a href="#" class="btn btns" style="background-color: crimson;" >{{i.bodyPart}}</a>
+            <a href="#" class="btn btns" style="background-color: green;">{{i.target}}</a>
+          </div>
+          <h3 class="card-title">{{i.name}}</h3>
+        </div>
+      </div>
+  </ng-container>
+</div>
+<div class="pagination" >
+  <pagination-controls (pageChange)="p=$event" class="center"></pagination-controls>
+</div>
+

@@ -1,5 +1,9 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,Input,OnInit,ViewChild} from '@angular/core';
 import { ApiService } from '../api.service';
+import { AdItem } from './ad-items';
+import { AdComponent } from './ad.component';
+import { AdDirective } from './ad.directive';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-show-results',
@@ -9,33 +13,54 @@ import { ApiService } from '../api.service';
 
 export class ShowResultsComponent implements OnInit {
 
-  constructor( private api:ApiService) {
-      this.getExercises();
-  }
+    @Input() ads: AdItem[] = [];
 
-  allExercise: any = [];
-  newExercise: any = [];
-  p: any;
+    @ViewChild(AdDirective,{static:true}) adHost !: AdDirective;
+    index:number|undefined;
 
-  ngOnInit(): void {
+    constructor(private api:ApiService) {}
+    ngOnInit(): void {
+        this.sendMsg(0,"");
+    }
 
-  }
 
-  getExercises() {
-    this.api.listOfAllExercises().subscribe(data=>{
-      this.allExercise = data;
-    })
-  }
 
-  changeResults() {
-    console.log("geder");
-    let part = this.api.getPart();
-    this.api.listbyBodyPart(part).subscribe(data=>{
-      this.allExercise = data;
-      console.log(this.allExercise);
-      this.allExercise = this.newExercise;
-      console.log(this.allExercise);
-    })
-  }
+    // Dynamic Component Selection Fuction
+    sendMsg(val:number,str:string){
+      this.index = val;
+      const adItem = this.ads[this.index];
 
+      const viewContainerRef = this.adHost.viewContainerRef;
+      viewContainerRef.clear();
+
+      const componentRef = viewContainerRef.createComponent<AdComponent>(adItem.component);
+      componentRef.instance.data = adItem.data;
+
+    }
+
+    // Owl Carosuel Features
+    customOptions: OwlOptions = {
+      loop: true,
+      mouseDrag: true,
+      touchDrag: true,
+      pullDrag: true,
+      dots: true,
+      navSpeed: 700,
+      navText: ['', ''],
+      responsive: {
+        0: {
+          items: 1
+        },
+        400: {
+          items: 2
+        },
+        740: {
+          items: 3
+        },
+        940: {
+          items: 4
+        }
+      },
+      nav: true
+    }
 }

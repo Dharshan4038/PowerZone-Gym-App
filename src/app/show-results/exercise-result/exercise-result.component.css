@@ -1,0 +1,38 @@
+
+.c1 {
+  max-width: 350px;
+  margin-top: 5%;
+  margin-left: 50px;
+  padding: 1.5em 0.5em 0.5em;
+  box-shadow: 0 5px 10px rgba(0, 0, 0,0.2);
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+.card-title {
+  text-transform: capitalize;
+}
+
+.card-img-top {
+  margin: 0 auto;
+}
+
+.btns {
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  border-radius: 50px;
+  color: white;
+  font-size: 1rem;
+  height: 40px;
+  font-size: 18px;
+  width: fit-content;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+

@@ -12,13 +12,22 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ShowResultsComponent } from './show-results/show-results.component';
+import { ExerciseResultComponent } from './show-results/exercise-result/exercise-result.component';
+import { AllComponent } from './show-results/all/all.component';
+import { AdDirective } from './show-results/ad.directive';
+import { ExerciseComponent } from './show-results/exercise/exercise.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ShowResultsComponent
+    ShowResultsComponent,
+    ExerciseResultComponent,
+    AllComponent,
+    AdDirective,
+    ExerciseComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +37,7 @@ import { ShowResultsComponent } from './show-results/show-results.component';
     BrowserAnimationsModule,
     NgxPaginationModule
   ],
-  providers: [ApiService,ShowResultsComponent],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 
