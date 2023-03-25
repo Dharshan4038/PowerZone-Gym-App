@@ -48,6 +48,13 @@ export class ApiService {
       return this.http.get<any>(url,{headers});
   }
 
+  listbyId(val:string): Observable<any>{
+    let headers = new HttpHeaders().set('x-rapidapi-key',this.apiKey)
+      .set('x-rapidapi-host',this.apiHost);
+      let url = "https://exercisedb.p.rapidapi.com/exercises/exercise/"+val;
+      return this.http.get<any>(url,{headers});
+  }
+
   getAds() {
     return [
       new AdItem(

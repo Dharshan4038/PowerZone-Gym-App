@@ -1,1 +1,66 @@
+<section id="home" class="home">
+  <div class="container-fluid flu">
+      <nav class="navbar navbar-expand-lg">
+        <img src="../../assets/images/Logo.png" alt="logo">
+        <a class="navbar-brand ht">Power<span style="color:red"> Zone</span></a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" routerLink= "/"  >Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#exer" >Exercises</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="row">
+
+        <div class="col-lg-6">
+          <img src="{{selectExercise.gifUrl}}" class="image" alt="banner">
+        </div>
+
+        <div class="cls col-lg-6">
+          <h1 class="pwt" >{{selectExercise.name}}</h1>
+          <p class="para" >Exercises keep you strong. <span style="text-transform: capitalize;">{{selectExercise.name}}</span> is one of the best exercises to target your {{selectExercise.target}}. It will help you improve your mood and gain energy.</p>
+
+          <div class="row">
+              <div class="badge">
+                <img src="../../../assets/icons/body-part.png" alt="">
+              </div>
+              <p class="desc">{{selectExercise.bodyPart}}</p>
+          </div>
+
+          <div class="row">
+              <div class="badge">
+                <img src="../../../assets/icons/target.png" alt="">
+              </div>
+              <p class="desc">{{selectExercise.target}}</p>
+          </div>
+
+          <div class="row">
+            <div class="badge">
+              <img src="../../../assets/icons/equipment.png" alt="">
+            </div>
+            <p class="desc">{{selectExercise.equipment}}</p>
+        </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="sec-2" >
+  <div class="container-fluid flu1">
+    <div class="video-head">
+      <h1 style="text-transform: capitalize; padding-top: 35px;" >Watch {{selectExercise.name}} exercise videos</h1>
+    </div>
+    <div class="row r1">
+      <ng-container *ngFor="let i of items" >
+        <div class="card c1" style="width: 20rem;">
+          <img class="card-img-top" style="width: 20rem;" src="{{i.bestThumbnail.url}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{i.title}}</h5>
+            <h4 class="card-text">{{i.author.name}}</h4>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
 

@@ -50,8 +50,4 @@ export class SearchComponent implements AdComponent,OnInit {
         }
       })
     }
-
-
-
-
 }

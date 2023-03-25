@@ -1,6 +1,7 @@
 import { Component, Input,OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
 import { AdComponent } from '../ad.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-all',
@@ -11,7 +12,7 @@ import { AdComponent } from '../ad.component';
 export class AllComponent implements AdComponent,OnInit {
   @Input() data: any;
 
-  constructor(private api:ApiService){}
+  constructor(private api:ApiService,private route:Router){}
 
   allExercise: any=[];
   p:any;
@@ -26,5 +27,9 @@ export class AllComponent implements AdComponent,OnInit {
     })
   }
 
+  onSelect(val:any) {
+    console.log("asd");
+    this.route.navigate(['/exercise',val.id]);
+  }
 
 }
