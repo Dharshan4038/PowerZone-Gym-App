@@ -93,7 +93,6 @@
 
 /* sec-2 */
 
-
 .header {
   margin-top: 10%;
   text-align: center;
@@ -101,7 +100,8 @@
 
 .flu1 {
   padding: 0% 10% 0%;
-  height: 100vh;
+  height: calc(100%-30px);
+
 }
 
 .r1 {
@@ -109,6 +109,7 @@
 }
 
 .c1 {
+  margin-top: -5%;
   margin-right: 5%;
   margin-left: 1%;
   border: none;
@@ -121,6 +122,54 @@
 }
 
 
+.c2 {
+  max-width: 350px;
+  margin-top: 5%;
+  margin-left: 50px;
+  padding: 0.5em 0.5em 0.5em;
+  box-shadow: 0 5px 10px rgba(0, 0, 0,0.2);
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+.c2:hover {
+  transform: scale(1.03);
+  transition: 0.3 ease-in-out;
+}
+
+.btns {
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  border-radius: 50px;
+  color: white;
+  font-size: 1rem;
+  height: 40px;
+  font-size: 18px;
+  width: fit-content;
+}
+
+.flu3 {
+  padding: 0% 10% 0%;
+  height: 95vh;
+}
+
+.muscle-head {
+  margin-top: 5%;
+}
+
+
+#footer {
+  padding: 7% 15%;
+  text-align: center;
+  color: white;
+}
+
+.logo {
+  margin: 15px;
+  font-size: 1.5rem;
+}
+
 @media (max-width: 1024px) {
   .image {
       display: none;
@@ -130,6 +179,10 @@
   }
 
   .c1 {
+    margin: 5% auto;
+  }
+
+  .c2 {
     margin: 5% auto;
   }
 

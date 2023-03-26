@@ -28,7 +28,6 @@ export class AllComponent implements AdComponent,OnInit {
   }
 
   onSelect(val:any) {
-    console.log("asd");
     this.route.navigate(['/exercise',val.id]);
   }
 

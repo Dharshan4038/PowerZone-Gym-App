@@ -1,6 +1,6 @@
 <div class="row">
   <ng-container *ngFor="let i of allExercise | paginate: {itemsPerPage: 6,currentPage: p}" >
-      <div class="card c1">
+      <div class="card c1" (click)="onSelect(i)">
         <img class="card-img-top"  src = "{{i.gifUrl}}" alt="Card image cap">
         <div class="card-body">
           <div class="row">

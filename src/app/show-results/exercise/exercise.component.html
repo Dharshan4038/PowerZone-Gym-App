@@ -48,12 +48,14 @@
 <section class="sec-2" >
   <div class="container-fluid flu1">
     <div class="video-head">
-      <h1 style="text-transform: capitalize; padding-top: 35px;" >Watch {{selectExercise.name}} exercise videos</h1>
+      <h1 style="text-transform: capitalize; padding-top: 35px;" >Watch <span style="color: crimson;">{{selectExercise.name}}</span> exercise videos</h1>
     </div>
     <div class="row r1">
       <ng-container *ngFor="let i of items" >
         <div class="card c1" style="width: 20rem;">
-          <img class="card-img-top" style="width: 20rem;" src="{{i.bestThumbnail.url}}" alt="Card image cap">
+          <a href="{{i.url}}" target="_blank">
+            <img class="card-img-top" style="width: 20rem;" src="{{i.bestThumbnail.url}}" alt="Card image cap">
+          </a>
           <div class="card-body">
             <h5 class="card-title">{{i.title}}</h5>
             <h4 class="card-text">{{i.author.name}}</h4>
@@ -64,3 +66,56 @@
   </div>
 </section>
 
+<section>
+    <div class="container-fluid flu3">
+      <div class="muscle-head">
+        <h1 style="text-transform: capitalize;" >Exercises that target the same muscle group</h1>
+      </div>
+      <div class="row">
+          <ng-container *ngFor="let i of muscleExercise" >
+            <div class="card c2">
+              <img class="card-img-top"  src = "{{i.gifUrl}}" alt="Card image cap">
+              <div class="card-body">
+                <div class="row">
+                  <a href="#" class="btn btns" style="background-color: crimson;" >{{i.bodyPart}}</a>
+                  <a href="#" class="btn btns" style="background-color: green;">{{i.target}}</a>
+                </div>
+                <h3 class="card-title">{{i.name}}</h3>
+              </div>
+            </div>
+        </ng-container>
+      </div>
+    </div>
+</section>
+
+<section>
+  <div class="container-fluid flu3">
+    <div class="muscle-head">
+      <h1 style="text-transform: capitalize;" >Exercises that use same equipment</h1>
+    </div>
+    <div class="row">
+        <ng-container *ngFor="let i of equipItems">
+          <div class="card c2">
+            <img class="card-img-top"  src = "{{i.gifUrl}}" alt="Card image cap">
+            <div class="card-body">
+              <div class="row">
+                <a href="#" class="btn btns" style="background-color: crimson;" >{{i.bodyPart}}</a>
+                <a href="#" class="btn btns" style="background-color: green;">{{i.target}}</a>
+              </div>
+              <h3 class="card-title">{{i.name}}</h3>
+            </div>
+          </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+<section>
+  <footer id="footer" class="bg-dark">
+    <i class="logo fa-brands fa-twitter"></i>
+    <i class="logo fa-brands fa-facebook"></i>
+    <i class="logo fa-brands fa-instagram"></i>
+    <i class="logo fa-solid fa-envelope"></i>
+    <p>© Copyright 2023 Power Zone</p>
+  </footer>
+</section>

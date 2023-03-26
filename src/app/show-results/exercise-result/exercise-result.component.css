@@ -9,6 +9,11 @@
   cursor: pointer;
 }
 
+.c1:hover {
+  transform: scale(1.03);
+  transition: 0.3 ease-in-out;
+}
+
 .card-title {
   text-transform: capitalize;
 }
