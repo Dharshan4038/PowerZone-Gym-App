@@ -101,7 +101,6 @@
 .flu1 {
   padding: 0% 10% 0%;
   height: calc(100%-30px);
-
 }
 
 .r1 {
@@ -184,6 +183,10 @@
 
   .c2 {
     margin: 5% auto;
+  }
+
+  .flu3 {
+    height: fit-content;
   }
 
 }
