@@ -1,6 +1,6 @@
 # Power Zone GymApp
 
-This Project is completely a frontend based project built using Angular, The data for project was fetched from Rapid API.
+This is a **Frontend** project built using Angular, The data for project was fetched from Rapid API.
 
 ## Project Usage
   
