@@ -19,7 +19,7 @@ This is a **Frontend** project built using Angular, The data for project was fet
   2) **Angular Pagination** - For Pagination purpose.
   3) **Dynamic Component Loading.**
   4) **Angular Routing** with parameters through **snapshot**.
-  5) **Fetching API** by passing querys with parameters using **HttpParams and HttpHeaders**.
+  5) **Fetching API** by passing queries with parameters using **HttpParams and HttpHeaders**.
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/94830386/227757870-47beef2f-71d0-48cb-88c8-87b9d2489803.png)
